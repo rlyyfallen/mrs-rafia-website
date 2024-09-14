@@ -57,20 +57,30 @@ nav ul li a:hover {
     transition: background-color 0.3s ease-in-out;
 }
 
+.highlight-contact {
+    background-color: #ff6b6b;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.highlight-contact:hover {
+    background-color: #ff8b8b;
+    transition: background-color 0.3s ease-in-out;
+}
+
 /* Sections */
 section {
     padding: 20px;
     margin: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
+    text-align: left; /* Align text to the left */
 }
 
-.section-left {
-    text-align: left;
-}
-
-.section-right {
-    text-align: right;
+.contact-section {
+    background-color: #ff6b6b;
+    color: white;
 }
 
 /* Footer */
