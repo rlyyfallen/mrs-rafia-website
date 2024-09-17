@@ -95,27 +95,13 @@ footer {
     bottom: 0;
 }
 
-/* Footer text size reduced */
 footer p {
     font-size: 12px;
     margin-bottom: 0;
 }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-a {
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #ff6b6b;
-}
-
-/* Mute Button Styling */
-.mute-button {
+/* Sound Button Styling */
+.sound-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -125,23 +111,16 @@ a:hover {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
     outline: none;
 }
 
-.mute-button:hover {
+.sound-button:hover {
     background-color: #555;
 }
 
-/* Audio Player Styling */
-audio {
-    display: none; /* Hide the audio element */
-}
-
-/* Media Queries for Responsive Design */
-
-/* For mobile phones */
+/* Responsive Design for Mobile */
 @media only screen and (max-width: 600px) {
     .header-content {
         flex-direction: column;
