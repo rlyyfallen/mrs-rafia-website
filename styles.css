@@ -114,29 +114,29 @@ a:hover {
     color: #ff6b6b;
 }
 
-/* Audio Player Styling */
-audio {
-    display: block;
-    margin: 10px auto;
-    width: 80%;  /* Adjust the width to fit the design */
-    max-width: 300px;
+/* Mute Button Styling */
+.mute-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
     outline: none;
 }
 
-/* Additional Styling for Audio Controls (Optional) */
-audio::-webkit-media-controls-panel {
-    background-color: #333;
-    color: white;
+.mute-button:hover {
+    background-color: #555;
 }
 
-audio::-webkit-media-controls-play-button,
-audio::-webkit-media-controls-mute-button {
-    color: #ff6b6b;
-}
-
-/* Adding some spacing between sections for clarity */
-section {
-    margin-bottom: 50px;
+/* Audio Player Styling */
+audio {
+    display: none; /* Hide the audio element */
 }
 
 /* Media Queries for Responsive Design */
