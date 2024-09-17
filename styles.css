@@ -75,7 +75,7 @@ section {
     margin: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .contact-section {
@@ -105,4 +105,29 @@ a {
 
 a:hover {
     color: #ff6b6b;
+}
+
+/* Audio Player Styling */
+audio {
+    display: block;
+    margin: 10px auto;
+    width: 80%;  /* Adjust the width to fit the design */
+    max-width: 300px;
+    outline: none;
+}
+
+/* Additional Styling for Audio Controls (Optional) */
+audio::-webkit-media-controls-panel {
+    background-color: #333;
+    color: white;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button {
+    color: #ff6b6b;
+}
+
+/* Adding some spacing between sections for clarity */
+section {
+    margin-bottom: 50px;
 }
