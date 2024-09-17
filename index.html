@@ -8,6 +8,12 @@
 </head>
 <body>
 
+    <!-- Background Music -->
+    <audio id="background-music" loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <header>
         <div class="header-content">
             <img src="rafiya-photo.jpg" alt="Dr. Rafiya" class="profile-photo">
@@ -84,16 +90,12 @@
 
     <!-- JavaScript -->
     <script>
-        // Create an audio element dynamically
-        const audio = new Audio('background-music.mp3');
-        audio.loop = true;
+        const audio = document.getElementById('background-music');
         audio.volume = 0.4;
         audio.play(); // Start playing the music
 
-        // Get the sound button
         const soundButton = document.getElementById('sound-btn');
 
-        // Toggle mute/unmute functionality
         soundButton.addEventListener('click', () => {
             if (audio.paused) {
                 audio.play();
