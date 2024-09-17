@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes */
 }
 
 header {
@@ -11,6 +12,7 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition for header background color */
 }
 
 .header-content {
@@ -24,22 +26,30 @@ header {
     border-radius: 50%;
     width: 150px;
     margin-right: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for profile photo hover effect */
+}
+
+.profile-photo:hover {
+    transform: scale(1.1); /* Slightly enlarge profile photo on hover */
 }
 
 h1, h2 {
     margin: 10px 0;
+    transition: color 0.3s ease; /* Smooth transition for header color changes */
 }
 
 p {
     margin: 10px 0;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
     background-color: #444;
+    transition: background-color 0.3s ease; /* Smooth transition for nav background color */
 }
 
 nav ul li {
@@ -51,11 +61,12 @@ nav ul li a {
     color: white;
     padding: 10px;
     display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for link color and background color */
 }
 
 nav ul li a:hover {
     background-color: #555;
-    transition: background-color 0.3s ease-in-out;
+    color: #ff6b6b; /* Change text color on hover */
 }
 
 .highlight-contact {
@@ -63,11 +74,11 @@ nav ul li a:hover {
     padding: 10px;
     border-radius: 5px;
     color: white;
+    transition: background-color 0.3s ease; /* Smooth transition for contact highlight color */
 }
 
 .highlight-contact:hover {
     background-color: #ff8b8b;
-    transition: background-color 0.3s ease-in-out;
 }
 
 /* Sections */
@@ -77,11 +88,18 @@ section {
     background-color: #f4f4f4;
     border-radius: 8px;
     text-align: left;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for section background and shadow */
+}
+
+section:hover {
+    background-color: #e0e0e0; /* Slightly darker background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 .contact-section {
     background-color: #ff6b6b;
     color: white;
+    transition: background-color 0.3s ease; /* Smooth transition for contact section background color */
 }
 
 /* Footer */
@@ -93,6 +111,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    transition: background-color 0.3s ease; /* Smooth transition for footer background color */
 }
 
 footer p {
@@ -114,10 +133,12 @@ footer p {
     font-size: 24px;
     cursor: pointer;
     outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button colors */
 }
 
 .sound-button:hover {
     background-color: #555;
+    color: #ff6b6b; /* Change button text color on hover */
 }
 
 /* Responsive Design for Mobile */
