@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hidden Background Music -->
-    <audio id="background-music" autoplay loop>
-        <source src="background-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
 
     <header>
         <div class="header-content">
@@ -84,26 +79,28 @@
         <p>&copy; 2024 Dr. Rafiya. All rights reserved.</p>
     </footer>
 
-    <!-- Mute/Unmute Button -->
-    <button id="mute-btn" class="mute-button">🔊</button>
+    <!-- Custom Sound Button for Background Music -->
+    <button id="sound-btn" class="sound-button">🔊</button>
 
     <!-- JavaScript -->
     <script>
-        // Access the background music element and mute button
-        const backgroundMusic = document.getElementById('background-music');
-        const muteButton = document.getElementById('mute-btn');
+        // Create an audio element dynamically
+        const audio = new Audio('background-music.mp3');
+        audio.loop = true;
+        audio.volume = 0.4;
+        audio.play(); // Start playing the music
 
-        // Set the default volume to 40%
-        backgroundMusic.volume = 0.4;
+        // Get the sound button
+        const soundButton = document.getElementById('sound-btn');
 
-        // Mute/Unmute functionality
-        muteButton.addEventListener('click', () => {
-            if (backgroundMusic.muted) {
-                backgroundMusic.muted = false;
-                muteButton.textContent = '🔊'; // Icon for unmuted
+        // Toggle mute/unmute functionality
+        soundButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                soundButton.textContent = '🔊'; // Unmute icon
             } else {
-                backgroundMusic.muted = true;
-                muteButton.textContent = '🔇'; // Icon for muted
+                audio.pause();
+                soundButton.textContent = '🔇'; // Mute icon
             }
         });
     </script>
