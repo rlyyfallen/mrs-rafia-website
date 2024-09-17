@@ -17,6 +17,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column; /* For smaller screens */
 }
 
 .profile-photo {
@@ -94,6 +95,12 @@ footer {
     bottom: 0;
 }
 
+/* Footer text size reduced */
+footer p {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
@@ -130,4 +137,49 @@ audio::-webkit-media-controls-mute-button {
 /* Adding some spacing between sections for clarity */
 section {
     margin-bottom: 50px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For mobile phones */
+@media only screen and (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 100px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+/* For tablets */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .profile-photo {
+        width: 120px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
 }
