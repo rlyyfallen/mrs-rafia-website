@@ -1,111 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Rafiya - Professional Resume</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out; /* Smooth transition for background and text color on all devices */
+}
 
-    <!-- Background Music -->
-    <audio id="background-music" loop>
-        <source src="background-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out; /* Smooth transition for header background and text color */
+}
 
-    <header>
-        <div class="header-content">
-            <img src="rafiya-photo.jpg" alt="Dr. Rafiya" class="profile-photo">
-            <div class="title-section">
-                <h1>Dr. Rafiya</h1>
-                <p>PhD in Commerce | Assistant Professor | Researcher</p>
-                <p>Email: <a href="mailto:Rafiya.banu@crescent.edu">Rafiya.banu@crescent.edu</a></p>
-            </div>
-        </div>
-    </header>
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* For smaller screens */
+    transition: all 0.4s ease-in-out;
+}
 
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#research">Research & Publications</a></li>
-            <li><a href="#courses">Lecture Courses</a></li>
-            <li><a href="#contact" class="highlight-contact">Contact</a></li>
-        </ul>
-    </nav>
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    margin-right: 20px;
+    transition: transform 0.4s ease-in-out; /* Smooth transition for profile photo hover effect */
+}
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>Dr. Rafiya is a distinguished professional with a strong academic foundation and extensive expertise in commerce, finance, operations, and research. Her educational journey reflects a deep commitment to both her professional field and personal growth.</p>
-    </section>
+.profile-photo:hover {
+    transform: scale(1.1); /* Slightly enlarge profile photo on hover */
+}
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Assistant Professor</strong> - B.S. Abdur Rahman Crescent Institute of Science & Technology (2021 - Present)</li>
-            <li><strong>Assistant Professor</strong> - Vels University, Pallavaram, Chennai (2019 - 2021)</li>
-            <li><strong>Senior Workflow Specialist</strong> - Tata Consultancy Services (2013 - 2019)</li>
-            <li><strong>Branch Manager</strong> - Muthoot Fincorp (2012)</li>
-        </ul>
-    </section>
+h1, h2 {
+    margin: 10px 0;
+    transition: color 0.4s ease-in-out; /* Smooth transition for header text color */
+}
 
-    <!-- Research Section -->
-    <section id="research" class="section">
-        <h2>Research & Publications</h2>
-        <p>Dr. Rafiya has published extensively in international journals on topics related to Human Capital Management and Organizational Performance. Some of her prominent works include:</p>
-        <ul>
-            <li>"A Relationship Between Motivation and Human Capital Management" – IJPAM, 2018</li>
-            <li>"Impact of Human Capital Management on Organizational Performance" – IJITEE, 2019</li>
-            <li>"Human Resources Development Practices in Indian Banks" – JETIR, 2019</li>
-        </ul>
-    </section>
+p {
+    margin: 10px 0;
+    transition: color 0.4s ease-in-out; /* Smooth transition for paragraph text color */
+}
 
-    <!-- Courses Section -->
-    <section id="courses" class="section">
-        <h2>Lecture Courses</h2>
-        <ul>
-            <li>Practical Auditing</li>
-            <li>Indirect Taxes</li>
-            <li>E-Commerce</li>
-            <li>Company Law and Practice</li>
-        </ul>
-    </section>
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    transition: background-color 0.4s ease-in-out; /* Smooth transition for nav background */
+}
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch with Dr. Rafiya, feel free to email at: <a href="mailto:Rafiya.banu@crescent.edu">Rafiya.banu@crescent.edu</a></p>
-    </section>
+nav ul li {
+    margin: 0 15px;
+}
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Dr. Rafiya. All rights reserved.</p>
-    </footer>
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out; /* Smooth transition for link text and background color */
+}
 
-    <!-- Custom Sound Button for Background Music -->
-    <button id="sound-btn" class="sound-button">🔊</button>
+nav ul li a:hover {
+    background-color: #555;
+    color: #ff6b6b; /* Change text color on hover */
+}
 
-    <!-- JavaScript -->
-    <script>
-        const audio = document.getElementById('background-music');
-        audio.volume = 0.4;
-        audio.play(); // Start playing the music
+.highlight-contact {
+    background-color: #ff6b6b;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.4s ease-in-out; /* Smooth transition for contact highlight */
+}
 
-        const soundButton = document.getElementById('sound-btn');
+.highlight-contact:hover {
+    background-color: #ff8b8b;
+}
 
-        soundButton.addEventListener('click', () => {
-            if (audio.paused) {
-                audio.play();
-                soundButton.textContent = '🔊'; // Unmute icon
-            } else {
-                audio.pause();
-                soundButton.textContent = '🔇'; // Mute icon
-            }
-        });
-    </script>
+/* Sections */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: left;
+    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth transition for section background and shadow */
+}
 
-</body>
-</html>
+section:hover {
+    background-color: #e0e0e0; /* Slightly darker background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.contact-section {
+    background-color: #ff6b6b;
+    color: white;
+    transition: background-color 0.4s ease-in-out; /* Smooth transition for contact section background */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out; /* Smooth transition for footer background and text color */
+}
+
+footer p {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+/* Sound Button Styling */
+.sound-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out; /* Smooth transition for button hover effects */
+}
+
+.sound-button:hover {
+    background-color: #ff6b6b;
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .profile-photo {
+        width: 120px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+}
